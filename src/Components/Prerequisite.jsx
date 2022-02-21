@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import {Auth} from "../ContextApi/AuthContext"
+import {Link} from "react-router-dom";
 export const Prerequisite = () => {
    let {isLogin} = useContext(Auth);
   return (
@@ -12,6 +13,7 @@ export const Prerequisite = () => {
 <input type="checkbox"/>
    <lable>Do You Have Laptop</lable>
 </form>
+<Link to="/Info"><button>Continue</button></Link>
 
       </div>
    
