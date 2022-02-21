@@ -3,12 +3,16 @@ import { createContext,useState } from "react";
 export const Auth = createContext();
 const AuthContext = ({children})=>{
     const [isLogin,setIsLogin] = useState(false);
-    const handleLogin = ()=>{
-        setIsLogin(true);
+    const handleLogin = (name,password)=>{
+        if( name === "admin" && password=== "admin"){
+            setIsLogin(true);
 
+        }
+        
+       
     }
     return(
-        <Auth.Provider value={{isLogin}}>{children}</Auth.Provider>
+        <Auth.Provider value={{isLogin,handleLogin}}>{children}</Auth.Provider>
     )
    
 
